@@ -24,7 +24,8 @@ RUN apt-get update && \
         git && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install diart torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+RUN pip install diart
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 COPY . .
 
