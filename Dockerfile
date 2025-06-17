@@ -80,4 +80,4 @@ EXPOSE 8000
 ENTRYPOINT ["whisperlivekit-server", "--host", "0.0.0.0"]
 
 # Default args
-CMD ["--model", "tiny.en", "diart"]
+CMD ["--model", "tiny.en", "--diarization"]
