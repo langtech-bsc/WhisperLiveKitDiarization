@@ -30,10 +30,12 @@ RUN apt-get update && \
         python3-pip \
         ffmpeg \
         git && \
-        libportaudio2 && \
+        portaudio19-dev && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install diart
+# RUN apt-get install -y --no-install-recommends libportaudio2
+
+RUN pip install diart && sounddevice
 RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 COPY . .
