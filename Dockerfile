@@ -29,11 +29,12 @@ RUN apt-get update && \
         python3 \
         python3-pip \
         ffmpeg \
-        git && \
-        portaudio19-dev && \
+        git \
+        libportaudio2 \
     rm -rf /var/lib/apt/lists/*
 
 # RUN apt-get install -y --no-install-recommends libportaudio2
+# portaudio19-dev
 
 RUN pip install diart && sounddevice
 RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
