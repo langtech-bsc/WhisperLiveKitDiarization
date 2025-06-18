@@ -30,7 +30,7 @@ RUN apt-get update && \
         python3-pip \
         ffmpeg \
         git \
-        libportaudio2 \
+        libportaudio2 && \
     rm -rf /var/lib/apt/lists/*
 
 # RUN apt-get install -y --no-install-recommends libportaudio2
