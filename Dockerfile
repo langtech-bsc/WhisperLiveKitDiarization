@@ -30,6 +30,7 @@ RUN apt-get update && \
         python3-pip \
         ffmpeg \
         git && \
+        libportaudio2 \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install diart
