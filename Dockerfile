@@ -14,6 +14,7 @@ ENV HF_HUB_CACHE="/app/tmp/cache/huggingface/hub"
 ENV XDG_CACHE_HOME="/app/tmp/cache/huggingface"
 ENV LIBROSA_CACHE_DIR="/app/tmp/librosa_cache"
 ENV NUMBA_CACHE_DIR="/app/tmp/numba_cache"
+ENV MPLCONFIGDIR="/app/tmp/matplotlib"
 ENV HF_HUB_ETAG_TIMEOUT="600"
 ENV HF_HUB_DOWNLOAD_TIMEOUT="600"
 
@@ -46,12 +47,16 @@ RUN mkdir -p $HF_HOME && \
     mkdir -p $XDG_CACHE_HOME && \
     mkdir -p $LIBROSA_CACHE_DIR && \
     mkdir -p $NUMBA_CACHE_DIR && \
+    mkdir -p $MPLCONFIGDIR && \
     chmod 777 $HF_HOME && \
     chmod 777 $HF_HUB_CACHE && \
     chmod 777 $XDG_CACHE_HOME && \
     chmod 777 $LIBROSA_CACHE_DIR && \
     chmod 777 $NUMBA_CACHE_DIR && \
+    chmod 777 $MPLCONFIGDIR && \
     chmod -R 777 /app
+
+RUN mkdir -p /.cache && chmod -R 777 /.cache
 
 # Install WhisperLiveKit directly, allowing for optional dependencies
 #   Note: For gates modedls, need to add your HF toke. See README.md
