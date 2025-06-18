@@ -36,7 +36,7 @@ RUN apt-get update && \
 # RUN apt-get install -y --no-install-recommends libportaudio2
 # portaudio19-dev
 
-RUN pip install diart && sounddevice
+RUN pip install diart sounddevice
 RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 COPY . .
