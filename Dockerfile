@@ -4,7 +4,8 @@
 # FROM nvidia/cuda:11.6.1-devel-ubuntu20.04
 # FROM nvidia/cuda:12.0.0-cudnn8-devel-ubuntu18.04
 # FROM nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
-FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
+# FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
@@ -23,6 +24,7 @@ ENV NUMBA_CACHE_DIR="/app/tmp/numba_cache"
 ENV MPLCONFIGDIR="/app/tmp/matplotlib"
 ENV HF_HUB_ETAG_TIMEOUT="600"
 ENV HF_HUB_DOWNLOAD_TIMEOUT="600"
+ENV LD_LIBRARY_PATH=/usr/local/cuda:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 # Install system dependencies
 #RUN apt-get update && \
