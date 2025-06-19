@@ -5,7 +5,8 @@
 # FROM nvidia/cuda:12.0.0-cudnn8-devel-ubuntu18.04
 # FROM nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
 # FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
-FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
+# FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
