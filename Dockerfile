@@ -36,7 +36,7 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 # 🧼 Set permissions for Hugging Face cache
-RUN mkdir -p $HF_HOME $XDG_CACHE_HOME $LIBROSA_CACHE_DIR $NUMBA_CACHE_DIR /.cache && \
+RUN mkdir -p $HF_HOME $XDG_CACHE_HOME $LIBROSA_CACHE_DIR $NUMBA_CACHE_DIR /root/.cache /.cache && \
     chmod -R 777 /app /root/.cache /.cache
 
 # Install WhisperLiveKit directly, allowing for optional dependencies
