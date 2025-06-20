@@ -44,7 +44,8 @@ RUN apt-get update && \
         libportaudio2 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y libaio1 && apt-get install -y libaio-dev
+RUN apt-get update && \
+    apt-get install -y libaio1 libaio-dev
 
 # RUN apt-get install -y --no-install-recommends libportaudio2
 # portaudio19-dev
