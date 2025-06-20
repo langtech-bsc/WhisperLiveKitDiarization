@@ -1,5 +1,5 @@
 # ORI --> cuDNN error: CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH
-# FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu22.04
+FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu22.04
 # TESTS UNTIL RIGHT PYTHON VERSION
 # FROM nvidia/cuda:11.6.1-devel-ubuntu20.04
 # FROM nvidia/cuda:12.0.0-cudnn8-devel-ubuntu18.04
@@ -7,7 +7,7 @@
 # FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
 # FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04
 # FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
-FROM nvcr.io/nvidia/pytorch:24.07-py3
+# FROM nvcr.io/nvidia/pytorch:24.07-py3
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
