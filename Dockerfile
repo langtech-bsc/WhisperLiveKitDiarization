@@ -25,7 +25,7 @@ ENV NUMBA_CACHE_DIR="/app/tmp/numba_cache"
 ENV MPLCONFIGDIR="/app/tmp/matplotlib"
 ENV HF_HUB_ETAG_TIMEOUT="600"
 ENV HF_HUB_DOWNLOAD_TIMEOUT="600"
-ENV LD_LIBRARY_PATH=/usr/local/cuda:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH="/usr/local/cuda:/usr/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH:-}"
 
 # Install system dependencies
 #RUN apt-get update && \
