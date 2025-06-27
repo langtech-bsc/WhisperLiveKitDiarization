@@ -124,5 +124,6 @@ ENTRYPOINT ["whisperlivekit-server", "--host", "0.0.0.0"]
 # Default args
 # CMD ["--model", "tiny", "--diarization"]
 CMD ["--model", "large-v2", \
+     "--diarization", \
      "--language", "es", \
      "--buffer_trimming_sec", "2"]
